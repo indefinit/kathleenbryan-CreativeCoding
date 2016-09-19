@@ -1,50 +1,33 @@
 function setup() {
-  createCanvas(800,600);
-  background(0);
-  x1=300;
-  y1=550;
-  x2=500;
-  y2=550;
+  
+  createCanvas(500,500);
+  background(0); 
 }
 
 function draw() {
-  stroke(250);
-  line(400, 550, 400, 350);
-  noFill();
-  stroke(250);
-  triangle(x1, y1, x2, y2, 400, 350);
-  stroke(250);
-  quad(x1, y1, x2, y2, 500, 350, 300, 350);
-  stroke(250);
-  beginShape();
-  vertex(x1, y1);
-  vertex(x2, y2);
-  vertex(561.803, 396.116);
-  vertex(400, 242.232);
-  vertex(238.197,396.116);
-  vertex(x1, y1);
-  endShape();
+  for (var x = 0; x < 250 ; x +=2) {
+  line(0, mouseX +2 , 500, mouseX 2 );
+  stroke(0,255,0); 
+  }
+
+ for (var x =1; x < 250 ; x +=2) {
+  line(0, mouseX+2, 500, mouseX+2);
+    stroke(255,255,0);
+  }
+
+
+ for (var x = 0; x < 500 ; x +=4) {
+  line(x+2, 250, x+2, 500 );
+  stroke(255,255,0); 
+  }
   
-  beginShape();
-  vertex(x1, y1);
-  vertex(x2, y2);
-  vertex(600, 396.116);
-  vertex(500, 220);
-  vertex(300,220);
-  vertex(200,396.116);
-  vertex(x1, y1);
-  endShape();
-  
-  beginShape();
-  vertex(x1, y1);
-  vertex(x2, y2);
-  vertex(650, 400);
-  vertex(600, 200);
-  vertex(400,100);
-  vertex(200,200);
-  vertex(150,400);
-  vertex(x1, y1);
-  endShape();
-  
-  
+  for (var x = 1; x < 500 ; x +=4) {
+  line(mouseX +2, 250, mouseX+2, 500 );
+  stroke(255); 
+  }
+
+/*
+line(mouseX, 0, mouseX, 100);
+fill(255,0,0);*/ 
+ 
 }
